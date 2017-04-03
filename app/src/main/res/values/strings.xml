@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">KarateCompetition</string>
+    <string name="contestLocation">All Valley</string>
+    <string name="contestName">Karate Championship</string>
+    <string name="buttonPunch">P</string>
+    <string name="buttonKick">K</string>
+    <string name="buttonSpecial">S</string>
+    <string name="buttonRematch">Rematch</string>
+    <string name="roundScoreInit">0</string>
+    <string name="roundScoreSeparator">-</string>
+    <string name="fightActionInit">Fight!</string>
+    <string name="fightHistoryInit"> </string>
+    <string name="lifeBarInit">100/100</string>
+</resources>

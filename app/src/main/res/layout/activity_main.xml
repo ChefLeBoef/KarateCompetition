@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.android.karatecompetition.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorCustom"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="@string/contestLocation"
+            android:textAllCaps="true" />
+
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:layout_margin="@dimen/smallMarginDim"
+            android:text="@string/contestName"
+            android:textAllCaps="true"
+            android:textSize="@dimen/headLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/ImageStyle.TeamsStyle"
+            android:src="@drawable/miyagi_do"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            style="@style/ImageStyle"
+            android:src="@drawable/vs"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            style="@style/ImageStyle.TeamsStyle"
+            android:src="@drawable/cobra_kai"
+            tools:ignore="ContentDescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/lifeBar1"
+            android:text="@string/lifeBarInit"
+            style="@style/LifeBar" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/scorePlayer1"
+                style="@style/ScoreStyle"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:text="@string/roundScoreInit" />
+
+            <TextView
+                style="@style/ScoreStyle"
+                android:text="@string/roundScoreSeparator" />
+
+            <TextView
+                android:id="@+id/scorePlayer2"
+                style="@style/ScoreStyle"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:text="@string/roundScoreInit" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/lifeBar2"
+            android:text="@string/lifeBarInit"
+            style="@style/LifeBar" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/largeMarginDim"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:baselineAligned="false">
+
+            <Button
+                android:id="@+id/buttonPunch1"
+                android:onClick="doDamage"
+                style="@style/ButtonStyle.PunchButton" />
+
+            <Button
+                android:id="@+id/buttonKick1"
+                android:onClick="doDamage"
+                style="@style/ButtonStyle.KickButton" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/fightActionTxt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/headRegular"
+            android:text="@string/fightActionInit"
+            android:gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonPunch2"
+                android:onClick="doDamage"
+                style="@style/ButtonStyle.PunchButton" />
+
+            <Button
+                android:id="@+id/buttonKick2"
+                android:onClick="doDamage"
+                style="@style/ButtonStyle.KickButton" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mediumMarginDim"
+        android:baselineAligned="false"
+        android:layout_marginBottom="@dimen/smallMarginDim"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSpecial1"
+                android:onClick="doDamage"
+                style="@style/ButtonStyle.SpecialButton" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fightHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/headRegular"
+            android:text="@string/fightHistoryInit"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:baselineAligned="false"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSpecial2"
+                android:onClick="doDamage"
+                style="@style/ButtonStyle.SpecialButton" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/buttonRematch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/largeMarginDim"
+            android:text="@string/buttonRematch"
+            android:onClick="rematchFight"
+            android:textSize="@dimen/headLarge" />
+    </RelativeLayout>
+
+</LinearLayout>

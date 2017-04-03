@@ -1,0 +1,90 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorButtonNormal">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="HeaderTextStyle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">@dimen/headRegular</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">@dimen/smallMarginDim</item>
+        <item name="android:layout_marginLeft">@dimen/largeMarginDim</item>
+        <item name="android:layout_marginRight">@dimen/largeMarginDim</item>
+    </style>
+
+    <style name="ScoreStyle">
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textSize">@dimen/headLarge</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_margin">@dimen/scoreMargin</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ImageStyle">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
+    <style name="ImageStyle.TeamsStyle">
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_height">@dimen/imageHeight</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">@dimen/buttonSize</item>
+        <item name="android:layout_height">@dimen/buttonSize</item>
+        <item name="android:textSize">@dimen/headRegular</item>
+    </style>
+
+    <style name="ButtonStyle.PunchButton">
+        <item name="android:background">@drawable/button_punch</item>
+        <item name="android:text">@string/buttonPunch</item>
+        <item name="android:layout_marginStart">@dimen/smallMarginDim</item>
+        <item name="android:layout_marginLeft">@dimen/smallMarginDim</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="ButtonStyle.KickButton">
+        <item name="android:background">@drawable/button_kick</item>
+        <item name="android:text">@string/buttonKick</item>
+        <item name="android:layout_marginEnd">@dimen/smallMarginDim</item>
+        <item name="android:layout_marginRight">@dimen/smallMarginDim</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="ButtonStyle.SpecialButton">
+        <item name="android:background">@drawable/button_special</item>
+        <item name="android:text">@string/buttonSpecial</item>
+    </style>
+
+    <style name="LifeBar">
+        <item name="android:background">@drawable/life_bar</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/largeMarginDim</item>
+        <item name="android:layout_margin">@dimen/smallMarginDim</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+</resources>

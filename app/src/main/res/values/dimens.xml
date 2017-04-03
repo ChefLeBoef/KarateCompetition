@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="smallMarginDim">8dp</dimen>
+    <dimen name="mediumMarginDim">16dp</dimen>
+    <dimen name="viewWidthDim">1dp</dimen>
+    <dimen name="largeMarginDim">24dp</dimen>
+    <dimen name="lastMarginDim">32dp</dimen>
+    <dimen name="imageHeight">160dp</dimen>
+    <dimen name="buttonSize">54dp</dimen>
+    <dimen name="buttonBorder">2dp</dimen>
+    <dimen name="lifeBarBorder">1dp</dimen>
+    <dimen name="scoreMargin">4dp</dimen>
+
+    <dimen name="headRegular">16sp</dimen>
+    <dimen name="headLarge">20sp</dimen>
+
+
+</resources>
