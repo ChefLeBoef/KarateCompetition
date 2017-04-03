@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     final String fstrGameOverTxt = "Game Over!";
     final String fstrGameStartTxt = "Fight!";
     final String fstrLifeTotal = "/100";
-    final String fstrPlayer1 = "Daniel-san";
-    final String fstrPlayer2 = "Johnny";
+    final String fstrPLAYER1 = "Daniel-san";
+    final String fstrPLAYER2 = "Johnny";
 
     int iScorePlayer1 = 0;
     int iScorePlayer2 = 0;
@@ -89,36 +89,17 @@ public class MainActivity extends AppCompatActivity {
             updateLifeTotals(iPlayer, iDamage);
             displayAction(strMoveArray[iMoveType]);
             //Check if a player has 0 life
-            if (iLifePlayer1 <= 0) {
-                iScorePlayer2++;
-                iRound++;
-                doRoundOverAction();
-                updateScore(fiPLAYER2);
-                strPlayerWonRound = fstrPlayer2;
-                displayHistory( String.format(  Locale.ENGLISH,
-                                                    "%s%s%d",
-                                                    strPlayerWonRound,
-                                                    " won Round ",
-                                                    iRound ));
-            }
-            else if (iLifePlayer2 <= 0) {
-                iScorePlayer1++;
-                iRound++;
-                doRoundOverAction();
-                updateScore(fiPLAYER1);
-                strPlayerWonRound = fstrPlayer1;
-                displayHistory( String.format(  Locale.ENGLISH,
-                                                    "%s%s%d",
-                                                    strPlayerWonRound,
-                                                    " won Round ",
-                                                    iRound ));
-            }
+            if (iLifePlayer1 <= 0) doRoundOverAction(fiPLAYER2);
+            else if (iLifePlayer2 <= 0) doRoundOverAction(fiPLAYER1);
 
             if (boIsGameOver()) {
+                strPlayerWonRound = (iScorePlayer1 == fiMAX_ROUNDS_TO_WIN) ?
+                                    fstrPLAYER1 : fstrPLAYER2;
+
                 displayHistory( String.format(  Locale.ENGLISH,
-                                                    "%s%s",
-                                                    strPlayerWonRound,
-                                                    " won the Match"));
+                                                "%s%s",
+                                                strPlayerWonRound,
+                                                " won the Match"));
                 doGameOverAction();
             }
         } else {
@@ -165,11 +146,29 @@ public class MainActivity extends AppCompatActivity {
         statusView.setText(status);
     }
 
-    void doRoundOverAction() {
+    void doRoundOverAction(int iPLayer) {
+        String strPlayerName;
         iLifePlayer1 = fiMAX_LIFE;
         iLifePlayer2 = fiMAX_LIFE;
+        iRound++;
         displayLifeTotal(fiPLAYER1);
         displayLifeTotal(fiPLAYER2);
+
+        if (iPLayer == fiPLAYER1) {
+            strPlayerName = fstrPLAYER1;
+            iScorePlayer1++;
+        } else{
+            strPlayerName = fstrPLAYER2;
+            iScorePlayer2++;
+        }
+
+        updateScore(iPLayer);
+
+        displayHistory( String.format(  Locale.ENGLISH,
+                                        "%s%s%d",
+                                        strPlayerName,
+                                        " won Round ",
+                                        iRound ));
     }
 
     void displayLifeTotal(int iPlayer){
