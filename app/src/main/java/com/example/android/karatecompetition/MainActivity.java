@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         int iPlayer;
         int iDamage;
         int iMoveType;
-        String strPlayerWonRound = "";
+        String strPlayerWonRound;
 
         //Modify only in case not game over
         if (!boIsGameOver()) {
